@@ -1,0 +1,25 @@
+1.Write a query to find the average count of transactions per day on polygon.
+Data table: polygon.transactions
+
+code--
+
+SELECT
+  AVG(transaction_count) AS avg_daily_transactions       --Avg function is used
+FROM (
+  SELECT
+    block_date,
+    COUNT(*) AS transaction_count                       --COUNT OF TRANSACTION      
+  FROM polygon.transactions                           --DATA OF TRANSACTIONS IS TAKEN FROM POLYGON TABLE 
+  GROUP BY
+    block_date
+) AS daily_transactions
+
+
+2.Write a query to find the top 10 holders of OP tokens.
+Data table: op_token_distributions_optimism.transfer_mapping
+
+select 
+
+from op_token_distributions_optimism.transfer_mapping
+
+limit 1000
